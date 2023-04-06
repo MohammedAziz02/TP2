@@ -1,0 +1,12 @@
+package com.tp2.web.Controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ErrorController {
+    @RequestMapping("/error")
+    public String handleError() {
+        return "error"; // return the name of the JSP file without the .jsp extension
+    }
+}
