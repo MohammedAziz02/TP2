@@ -1,6 +1,6 @@
 <%@ page import="org.springframework.context.annotation.AnnotationConfigApplicationContext" %>
 <%@ page import="com.tp2.config.AppConfig" %>
-<%@ page import="com.tp2.utils.CalculAgeImpl" %>
+<%@ page import="com.tp2.utils.tpClasses.CalculAgeImpl" %>
 <%--
   Created by IntelliJ IDEA.
   User: Mohammed Aziz02
@@ -26,7 +26,21 @@
           <th>age</th>
           <!-- Add more table column headers here -->
       </tr>
-      <!-- Iterate over the list of persons using JSTL forEach loop -->
+      <%--version de question n4--%>
+     <%-- <c:forEach items="${sessionScope.personnes}" var="person">
+          <tr>
+              <!-- Access the properties of each person using JSTL expression language -->
+              <td>${person.id}</td>
+              <td>${person.firstName}</td>
+              <td>${person.lastName}</td>
+              <td>${person.date_naiss}</td>
+              <td>${person.cne}</td>
+              <td>${calculate.calculer(person.date_naiss)}</td>
+              <!-- Display more properties of the person here -->
+          </tr>
+      </c:forEach>--%>
+
+      <%--version de question n6--%>
       <c:forEach items="${sessionScope.personnes}" var="person">
           <tr>
               <!-- Access the properties of each person using JSTL expression language -->

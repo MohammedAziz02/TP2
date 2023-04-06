@@ -1,10 +1,8 @@
-package com.tp2.utils;
-
-import org.springframework.stereotype.Component;
+package com.tp2.utils.tpClasses;
 
 import java.util.Date;
 
-public class CalculAgeImpl implements ICalculAge{
+public class CalculAgeImpl implements ICalculAge {
     @Override
     public int calculer(Date d) {
         // calculate age based on current date

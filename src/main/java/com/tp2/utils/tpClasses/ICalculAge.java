@@ -1,4 +1,4 @@
-package com.tp2.utils;
+package com.tp2.utils.tpClasses;
 
 import java.util.Date;
 

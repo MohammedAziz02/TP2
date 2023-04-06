@@ -2,8 +2,10 @@ package com.tp2.config;
 
 import com.tp2.Interceptors.MyInterceptor1;
 import com.tp2.Interceptors.MyInterceptor2;
-import com.tp2.utils.CalculAgeImpl;
+import com.tp2.utils.tpClasses.CalculAgeImpl;
 import com.tp2.utils.GestionPeronnes;
+import com.tp2.utils.tpClasses.CalculAgeMoisImpl;
+import com.tp2.utils.tpClasses.CompareAgeImpl;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -60,6 +62,16 @@ public class AppConfig implements WebMvcConfigurer {
     @Bean
     GestionPeronnes gestionPeronnes(){
         return new GestionPeronnes();
+    }
+
+    @Bean
+    CompareAgeImpl compareAge(){
+        return  new CompareAgeImpl();
+    }
+
+    @Bean
+    CalculAgeMoisImpl calculAgeMois(){
+        return  new CalculAgeMoisImpl();
     }
 
     @Override
